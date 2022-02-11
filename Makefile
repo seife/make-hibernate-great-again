@@ -19,6 +19,6 @@ help:
 	@echo
 
 install:
-	install -D src/systemd/10-resume-verbose.conf $(DESTDIR)/usr/lib/systemd/system/systemd-hibernate-resume@.service.d/10-resume-verbose.conf
-	install -D src/dracut/50-hibernate.conf $(DESTDIR)/usr/lib/dracut/dracut.conf.d/50-hibernate.conf
+	install -m0644 -pD src/systemd/10-resume-verbose.conf $(DESTDIR)/usr/lib/systemd/system/systemd-hibernate-resume@.service.d/10-resume-verbose.conf
+	install -m0644 -pD src/dracut/50-hibernate.conf $(DESTDIR)/usr/lib/dracut/dracut.conf.d/50-hibernate.conf
 
