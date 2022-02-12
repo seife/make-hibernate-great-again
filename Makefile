@@ -20,5 +20,6 @@ help:
 
 install:
 	install -m0644 -pD src/systemd/10-resume-verbose.conf $(DESTDIR)/usr/lib/systemd/system/systemd-hibernate-resume@.service.d/10-resume-verbose.conf
+	install -m0644 -pD src/systemd/10-suspend-verbose.conf $(DESTDIR)/usr/lib/systemd/system/systemd-hibernate.service.d/10-suspend-verbose.conf
 	install -m0644 -pD src/dracut/50-hibernate.conf $(DESTDIR)/usr/lib/dracut/dracut.conf.d/50-hibernate.conf
 
